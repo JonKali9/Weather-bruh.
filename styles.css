@@ -1,5 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    border: 0px solid red;
+}
+
+
+body {
+    width: 75vw;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto Slab';
+    background-color: rgb(199, 199, 199);
+}
+
+#top {
+    margin-top: 100px;
+}
+#top h1 {
+    font-size: 45px;
+    text-decoration: underline;
+}
+#top h2 {
+    font-size: 25px;
+    padding-left: 70px;
+}
+
+#input {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    display: inline-flex;
+}
+#input input {
+    width: 300px;
+    height: 20px;
+    border: rgb(194, 194, 194) 2px solid;
+    padding-left: 10px;
+    box-shadow: 3px 3px 10px rgb(87, 87, 87);
+}
+#input p {
+    height: 20px;
+    padding: 0 5px;
+    border: rgb(184, 184, 184) 2px solid;
+    background-color: rgb(230, 230, 230);
+    box-shadow: 3px 3px 10px rgb(87, 87, 87);
+}
+#input p:hover {
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+    box-shadow: 3px 3px 10px rgb(29, 29, 29);
+}
+
+.form {
+    display: block;
+    margin: 50px auto;
+    padding: 25px 0;
+    width: 500px;
+    text-align: left;
+    border: rgb(168, 168, 168) 4px solid;
+    border-radius: 15px;
+    background-color: rgb(211, 211, 211);
+    box-shadow: 5px 5px 20px rgba(66, 66, 66, 0.719);
+}
+.form img {
+    display: block;
+    margin: 50px auto 20px auto;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+.form h2 {
+    text-decoration: underline;
+    padding-left: 50px;
+    font-size: 28px;
+}
+.form p {
+    font-size: 18px;
+    padding-left: 55px;
 }
