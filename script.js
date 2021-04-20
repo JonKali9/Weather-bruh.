@@ -1,5 +1,7 @@
 //Function to add Weather Data to document
-const setWeather = (weather, temperature, humidity, time) => {
+const setWeather = (city, country, weather, temperature, humidity, time) => {
+  console.log("City:", city);
+  console.log("Country:", country);
   console.log("Weather:", weather);
   console.log("Temperature:", temperature);
   console.log("Humidity:", humidity);
@@ -22,13 +24,14 @@ const getWeather = async city => {
     const response = await fetch(url, body);
     if (response.ok) {
       const jsonResponse = await response.json();
+      const country = jsonResponse.sys.country;
       const weather = jsonResponse.weather[0].description;
       const temperature = jsonResponse.main.temp;
       const humidity = jsonResponse.main.humidity;
       const time = jsonResponse.dt;
       const date = new Date(time);
       const datetime = date.toLocaleTimeString();
-      setWeather(weather, temperature, humidity, datetime)
+      setWeather(city, country, weather, temperature, humidity, datetime)
       return jsonResponse;
     }
     alert("Request Failed!");
@@ -37,5 +40,11 @@ const getWeather = async city => {
   }
 }
 
+/*
 //Call to get the Weather in New York
-const berlinWeather = getWeather('New York');
+getWeather('New York');
+//Call to get the Weather in London
+getWeather('London');
+//Call to get the Weather in Paris
+getWeather('Paris');
+*/
