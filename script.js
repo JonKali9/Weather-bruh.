@@ -2,6 +2,14 @@ const formsDiv = document.getElementById("formsDiv");
 const userInput = document.querySelector('#input input');
 const goButton = document.querySelector('#input p');
 
+userInput.addEventListener('keyup', event => {
+  if (event.keyCode === 13) {
+    const city = userInput.value;
+    userInput.value = '';
+    getWeather(city);
+  }
+})
+
 goButton.addEventListener('click', () => {
   const city = userInput.value;
   userInput.value = '';
